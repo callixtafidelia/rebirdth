@@ -5,11 +5,17 @@ const isProd = process.env.NODE_ENV === "production";
 const repo = "/rebirdth";
 
 const nextConfig: NextConfig = {
-  basePath: isProd ? repo : "",
+  // ← makes <Image src="/logo.png" /> → /rebirdth/logo.png in prod
+  basePath:  isProd ? repo : "",
   assetPrefix: isProd ? `${repo}/` : "",
-  output: "export",
-  images: { unoptimized: true },
-  eslint: { ignoreDuringBuilds: true },
+
+  output: "export",     // you already have this
+  images: {
+    unoptimized: true,  // you already have this
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
