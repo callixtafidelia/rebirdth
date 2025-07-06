@@ -360,7 +360,7 @@ export default function HomePage() {
                 <div className="flex justify-center lg:justify-start">
                   <div className="relative">
                     <Image
-                      src="/logo.png"
+                      src="./logo.png"
                       alt="Rebirth Bird Logo"
                       width={384}   
                       height={384}  
