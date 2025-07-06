@@ -359,13 +359,13 @@ export default function HomePage() {
                 {/*Left side - Bird Logo*/}
                 <div className="flex justify-center lg:justify-start">
                   <div className="relative">
-                    <img
+                    <Image
                       src="/logo.png"
                       alt="Rebirth Bird Logo"
-                      width={384}  // Required: w-96 = 384px
-                      height={384} // Required: h-96 = 384px
+                      width={384}   
+                      height={384}  
                       className="w-96 h-96 lg:w-[28rem] lg:h-[28rem] object-contain"
-                     // Add this since it's above the fold
+                   priority
                     />
                   </div>
                 </div>
