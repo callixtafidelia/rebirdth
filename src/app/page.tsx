@@ -6,6 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import Navbar from "@/components/navbar"
 import Link from "next/link"
+import Image from 'next/image'
+
 import {
   BookOpen,
   Users,
@@ -350,20 +352,25 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* About Section */}
-        <section id="about" className="py-12">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
-              {/* Left side - Bird Logo */}
-              <div className="flex justify-center lg:justify-start">
-                <div className="relative">
-                  <img
-                    src="/logo.png"
-                    alt="Rebirth Bird Logo"
-                    className="w-96 h-96 lg:w-[28rem] lg:h-[28rem] object-contain"
-                  />
+          {/* About Section */}
+          <section id="about" className="py-12">
+            <div className="max-w-6xl mx-auto px-6 lg:px-8">
+              <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
+                {/*Left side - Bird Logo*/}
+                <div className="flex justify-center lg:justify-start">
+                  <div className="relative">
+                    <Image
+                      src="/logo.png"
+                      alt="Rebirth Bird Logo"
+                      width={384}  // Required: w-96 = 384px
+                      height={384} // Required: h-96 = 384px
+                      className="w-96 h-96 lg:w-[28rem] lg:h-[28rem] object-contain"
+                      priority // Add this since it's above the fold
+                    />
+                  </div>
                 </div>
-              </div>
+
+
 
               {/* Right side - Content */}
               <div className="text-center lg:text-left">
