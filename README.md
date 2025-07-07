@@ -2,7 +2,6 @@
 
 _Rebirdth_ is an educational platform built by Indonesian students passionate about research, dedicated to sharing knowledge and fostering a supportive community for student-led research. We aim to empower fellow students by providing accessible information, inspiring stories, and a space to grow together.
 
----
 
 ## About
 
@@ -16,7 +15,6 @@ Our mission is to:
 - **Share resources, insights, and experiences** to inspire other students
 - Make a **positive impact on society** through collective knowledge
 
----
 
 ## Tech Stack
 
@@ -25,13 +23,13 @@ This website is built using:
 - **Tailwind CSS** for styling
 - **GitHub Pages** for deployment
 
----
+
 
 ## Social Media
 
 Follow us on Instagram: [@rebirdth.id](https://instagram.com/rebirdth.id)
 
----
+
 
 ##  Get Started Locally
 
