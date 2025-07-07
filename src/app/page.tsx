@@ -1,3 +1,5 @@
+//src/app/page.tsx
+
 "use client"
 
 import { useState, useEffect } from "react"
@@ -72,7 +74,7 @@ export default function HomePage() {
       description: "Biology, Medicine, Environmental Science",
       gradient: "from-purple-500 to-blue-500",
       bgGradient: "from-purple-50 to-blue-50",
-      slug: "life-sciences",
+      slug: "life-science",
     },
     {
       icon: Calculator,
@@ -299,14 +301,9 @@ export default function HomePage() {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 pt-40">
+        <section className="relative py-45 lg:py-47 pt-40">
           <div className="max-w-6xl mx-auto px-6 lg:px-8">
             <div className="text-center relative z-10">
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-blue-100 border border-purple-300 rounded-full px-4 py-2 mb-8 text-sm font-medium text-purple-700 animate-bounce">
-                <Sparkles className="w-4 h-4" />
-                <span>🇮🇩 Created by Indonesian UBC Students</span>
-              </div>
-
               <h1 className="text-5xl lg:text-7xl font-light mb-8 leading-tight tracking-tight">
                 <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                   Unlock Your Research
@@ -434,22 +431,22 @@ export default function HomePage() {
                 {[
                   {
                     name: "Callixta Fidelia",
-                    image: "/placeholder.svg?height=150&width=150",
+                    image: "/callixta.jpg",
                     gradient: "from-purple-500 to-blue-500",
                   },
                   {
                     name: "Rachmania Ulwani",
-                    image: "/placeholder.svg?height=150&width=150",
+                    image: "./wani.jpg",
                     gradient: "from-blue-500 to-cyan-500",
                   },
                   {
                     name: "Evint Leovonzko",
-                    image: "/placeholder.svg?height=150&width=150",
+                    image: "/evint.jpg",
                     gradient: "from-green-500 to-teal-500",
                   },
                   {
                     name: "Farrel Ramdhani",
-                    image: "/placeholder.svg?height=150&width=150",
+                    image: "/farrel.jpg",
                     gradient: "from-indigo-500 to-purple-500",
                   },
                 ].map((member, index) => (
@@ -766,7 +763,7 @@ export default function HomePage() {
                       {
                         icon: Mail,
                         title: "Email",
-                        info: "contact@rebirth.org",
+                        info: "rebirdth.id@gmail.com",
                         gradient: "from-purple-500 to-blue-500",
                       },
                       {
