@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Navbar from "@/components/navbar"
+import HaloBackground from "@/components/HaloBackground"
 import Link from "next/link"
 import Image from 'next/image'
 
@@ -222,81 +223,23 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Gradient Pattern Background */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-purple-50/30 to-blue-50"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 via-transparent to-blue-400/20"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/10 to-transparent"></div>
 
-        {/* Animated gradient orbs */}
-        <div
-          className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(147, 51, 234, 0.3) 0%, rgba(147, 51, 234, 0.2) 50%, transparent 100%)",
-            animationDuration: "4s",
-            transform: `translate(${mousePosition.x * 0.03}px, ${scrollY * 0.1}px)`,
-          }}
-        />
-        <div
-          className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full blur-3xl animate-pulse"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.2) 50%, transparent 100%)",
-            animationDuration: "6s",
-            animationDelay: "2s",
-            transform: `translate(${-mousePosition.x * 0.02}px, ${-scrollY * 0.08}px)`,
-          }}
-        />
-        <div
-          className="absolute bottom-1/4 left-1/3 w-72 h-72 rounded-full blur-3xl animate-pulse"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, rgba(6, 182, 212, 0.15) 50%, transparent 100%)",
-            animationDuration: "5s",
-            animationDelay: "1s",
-            transform: `translate(${mousePosition.x * 0.025}px, ${scrollY * 0.06}px)`,
-          }}
-        />
-        <div
-          className="absolute bottom-0 right-1/3 w-64 h-64 rounded-full blur-3xl animate-pulse"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(99, 102, 241, 0.15) 50%, transparent 100%)",
-            animationDuration: "7s",
-            animationDelay: "3s",
-            transform: `translate(${-mousePosition.x * 0.015}px, ${-scrollY * 0.05}px)`,
-          }}
-        />
-
-        {/* Geometric patterns */}
-        <div className="absolute inset-0 opacity-40">
-          <div
-            className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-purple-300/30 to-blue-400/30 transform rotate-45 rounded-lg blur-sm animate-bounce"
-            style={{ animationDuration: "8s" }}
-          />
-          <div
-            className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-blue-300/25 to-cyan-400/25 transform rotate-45 rounded-lg blur-sm animate-bounce"
-            style={{ animationDuration: "10s", animationDelay: "2s" }}
-          />
-          <div
-            className="absolute bottom-32 left-40 w-28 h-28 bg-gradient-to-br from-cyan-300/20 to-teal-400/20 transform rotate-45 rounded-lg blur-sm animate-bounce"
-            style={{ animationDuration: "9s", animationDelay: "4s" }}
-          />
-          <div
-            className="absolute bottom-20 right-20 w-20 h-20 bg-gradient-to-br from-indigo-300/25 to-purple-400/25 transform rotate-45 rounded-lg blur-sm animate-bounce"
-            style={{ animationDuration: "7s", animationDelay: "1s" }}
-          />
-        </div>
+     {/* Moving Halo Background */}
+<HaloBackground 
+  haloCount={30}
+  haloSize={500}
+  animationSpeed={0.8}
+  mouseEffect={0.4}
+  blurIntensity={50}
+/>
 
         {/* Gradient mesh overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-transparent to-blue-500/5" />
         <div className="absolute inset-0 bg-gradient-to-bl from-cyan-500/5 via-transparent to-indigo-500/5" />
         <div className="absolute inset-0 bg-white/60 mix-blend-overlay" />
-      </div>
 
       {/* Main Content */}
-      <div className="relative z-10">
+      <div className="relative z-20">
         {/* Navigation */}
         <Navbar />
 
@@ -851,8 +794,7 @@ export default function HomePage() {
 
         {/* Footer */}
         <footer className="bg-gradient-to-br from-slate-100 via-purple-100/50 to-blue-100/50 text-slate-800 py-16 relative overflow-hidden border-t border-purple-200/30">
-          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(147,51,234,0.03)_50%,transparent_75%)] bg-[length:20px_20px]"></div>
-          <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+                 <div className="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
             <div className="grid md:grid-cols-4 gap-8">
               <div className="col-span-2">
                 <div className="flex items-center space-x-3 mb-6">
