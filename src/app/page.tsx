@@ -374,7 +374,7 @@ export default function HomePage() {
                 {[
                   {
                     name: "Callixta Fidelia",
-                    image: "/callixta.jpg",
+                    image: "./callixta.jpg",
                     gradient: "from-purple-500 to-blue-500",
                   },
                   {
@@ -384,12 +384,12 @@ export default function HomePage() {
                   },
                   {
                     name: "Evint Leovonzko",
-                    image: "/evint.jpg",
+                    image: "./evint.jpg",
                     gradient: "from-green-500 to-teal-500",
                   },
                   {
                     name: "Farrel Ramdhani",
-                    image: "/farrel.jpg",
+                    image: "./farrel.jpg",
                     gradient: "from-indigo-500 to-purple-500",
                   },
                 ].map((member, index) => (
