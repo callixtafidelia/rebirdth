@@ -1,3 +1,4 @@
+//components/ui/navbar.tsx
 "use client"
 
 import { useState } from "react"
@@ -8,13 +9,18 @@ import Link from "next/link"
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const scrollToSection = (sectionId: string) => {
+ const scrollToSection = (sectionId: string) => {
+  if (sectionId === "about") {
+    // Scroll to top of page for About section
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  } else {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
-    setIsMenuOpen(false)
   }
+  setIsMenuOpen(false)
+}
 
   return (
     <nav className="fixed top-0 w-full z-50 border-b bg-white/95 backdrop-blur-xl border-purple-200/50 shadow-lg">

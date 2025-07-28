@@ -113,7 +113,7 @@ const HaloBackground: React.FC<HaloBackgroundProps> = ({
       const material = new THREE.ShaderMaterial({
         uniforms: {
           color: { value: new THREE.Vector3(color.r, color.g, color.b) },
-          opacity: { value: 0.15 + Math.random() * 0.25 },
+          opacity: { value: 0.05 + Math.random() * 0.15 },
           time: { value: 0 },
           mouse: { value: new THREE.Vector2(0, 0) },
           mouseEffect: { value: mouseEffect }

@@ -1,4 +1,18 @@
+/* Import Inter font for enhanced typography */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Import Tailwind CSS */
 @import "tailwindcss";
+
+/* Font variables */
+:root {
+  --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Enhanced font features for better typography */
+* {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
 
 @layer base {
   :root {
@@ -74,17 +88,87 @@
   * {
     border-color: var(--color-border);
   }
+  
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Enhanced typography for headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  /* Enhanced typography for paragraphs */
+  p {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* Enhanced typography for buttons */
+  button {
+    font-family: var(--font-inter);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  /* Enhanced focus states */
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #8b5cf6;
+    outline-offset: 2px;
   }
 }
 
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
+/* Enhanced typography utility classes */
+.text-display {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-heading {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.text-body {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.text-caption {
+  font-family: var(--font-inter);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+/* Line clamp utilities */
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
